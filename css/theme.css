@@ -7,9 +7,10 @@
     
     .wrapper .img_holder {
         aspect-ratio: 3 / 2;
-        height: 100vh;
+        height: calc(clamp(50vh, 92.2vw, 100vh) - 40px);
         width: 100%;
         overflow: hidden;
+        /* height: 100vh; */
     }
     
     .wrapper .img_holder img {
@@ -20,4 +21,9 @@
     }
     
 
-    
+    @media only screen and (max-width: 767px) {
+        .wrapper .img_holder img {
+            /* object-fit: contain; */
+            object-position: top;
+        }
+    }
