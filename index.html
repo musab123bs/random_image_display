@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="css/theme.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="img_holder">
+            <img class="animate__animated animate__fadeIn" src="img/5.jpg" alt="">
+        </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <script>
+        	//Random hero images 
+	var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+
+    var diffClass = ['animate__animated animate__fadeIn', 'animate__animated animate__rubberBand', 'animate__animated animate__heartBeat', 'animate__animated animate__pulse', 'animate__animated animate__flash' ,  'animate__animated animate__flash animate__jello' , 'animate__animated animate__tada'];
+	// $('.img_holder img').attr('src', 'img/' + images[Math.floor(Math.random() * images.length)]).addClass('animate__jello');
+
+    a = document.querySelector('.img_holder img');
+    randomImg = images[Math.floor(Math.random() * images.length)];
+    a.setAttribute('src', 'img/' + randomImg);
+    randClass = diffClass[Math.floor(Math.random() * diffClass.length)];
+    a.setAttribute('class', randClass);
+    a.classList.add(randClass);
+    </script>
+</body>
+</html>
